@@ -1,0 +1,58 @@
+import dash
+from dash import dcc, html, Input, Output
+import pandas as pd
+import plotly.express as px
+
+# Load your data
+df = pd.read_csv('D:/ankita/python/carbon-market/2025_0103_1434.csv', sep='\t', encoding='utf-8')
+
+# Ensure 'COUNT' column exists for the size parameter
+if 'COUNT' not in df.columns:
+    df['COUNT'] = 1  # Assuming each row represents a single project
+
+# Initialize Dash app
+app = dash.Dash(__name__)
+
+# Layout
+app.layout = html.Div([
+    html.H1("Carbon Market Visualization", style= {'textAlign': 'center'}),
+    dcc.Dropdown(
+        id="project-scope-dropdown",
+        options=[{"label": mt, "value": mt} for mt in df["PROJECT_SCOPE"].unique()],
+        value=df["PROJECT_SCOPE"].unique()[0],
+        placeholder="Select a Project Scope"
+    ),
+    dcc.Graph(id="map")
+])
+
+# Callback for interactivity
+@app.callback(
+    Output("map", "figure"),
+    Input("project-scope-dropdown", "value")
+)
+def update_map(selected_project_scope):
+    # Filter data based on selected market type
+    filtered_data = df[df["PROJECT_SCOPE"] == selected_project_scope]
+
+    # Aggregate data by country
+    aggregated_data = filtered_data.groupby(['COUNTRY', 'ISO3']).agg({
+        'TOTAL_CREDITS_ISSUED': 'sum',
+        'COUNT': 'sum'
+    }).reset_index()
+    
+    # Create map
+    fig = px.scatter_geo(
+        aggregated_data,
+        locations="ISO3",
+        color="TOTAL_CREDITS_ISSUED",
+        size="COUNT",
+        hover_name="COUNTRY",
+        projection="natural earth",
+        title=f"Projects in {selected_project_scope} Scope",
+        labels={"COUNT": "Project Count"}
+    )
+    return fig
+
+# Run the app
+if __name__ == "__main__":
+    app.run_server(debug=True)
