@@ -1,4 +1,4 @@
-# Carbon Market Visualization Dashboard
+#  Carbon Market Visualization Dashboard
 
 ![Dashboard Screenshot](https://github.com/ankita-karki/carbon-market/blob/main/output%20map/Forestry&Landuse.png?raw=true)
 
@@ -38,7 +38,8 @@ Run the application:
 app.py
 
 ## Access the dashboard at:
-http://localhost:8050
+http://127.0.0.1:8050/
+
 
 ## Interact with the dashboard:
 Use the dropdown to select project scopes
