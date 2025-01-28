@@ -1,6 +1,6 @@
 # Carbon Market Visualization Dashboard
 
-![Dashboard Screenshot](
+![Dashboard Screenshot](https://github.com/ankita-karki/carbon-market/blob/main/output%20map/Forestry&Landuse.png?raw=true)
 
 An interactive dashboard for visualizing carbon credit distribution across different project scopes and geographical regions.
 
