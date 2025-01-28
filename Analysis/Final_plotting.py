@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 
 # Load the data
-df = pd.read_csv('D:/ankita/python/carbon-market/2025_0103_1434.csv', sep='\t', encoding='utf-8')
+df = pd.read_csv('D:/ankita/python/carbon-market/Data/2025_0103_1434.csv', sep='\t', encoding='utf-8')
 
 # Ensure 'COUNT' column exists for the size parameter
 if 'COUNT' not in df.columns:
