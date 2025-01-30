@@ -7,13 +7,13 @@ This repository contains an interactive dashboard for visualizing carbon credit 
 Data Source
 
 The dataset includes aggregated project data from multiple voluntary carbon market registries, processed through SQL queries. The extracted data consists of:
-Region
-Country
-Market Type
-Project Scope
-Project Type
-Total Credits Issued
-Number of Projects
+* Region
+* Country
+* Market Type
+* Project Scope
+* Project Type
+* Total Credits Issued
+* Number of Projects
 
 ## Features
 
