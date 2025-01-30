@@ -2,7 +2,18 @@
 
 ![Dashboard Screenshot](https://github.com/ankita-karki/carbon-market/blob/main/output%20map/Forestry&Landuse.png?raw=true)
 
-An interactive dashboard for visualizing carbon credit distribution across different project scopes and geographical regions.
+This repository contains an interactive dashboard for visualizing carbon credit distribution across different project scopes and geographical regions.The dataset used in this project was obtained from SQL queries run on carbon market registries.
+
+Data Source
+
+The dataset includes aggregated project data from multiple voluntary carbon market registries, processed through SQL queries. The extracted data consists of:
+Region
+Country
+Market Type
+Project Scope
+Project Type
+Total Credits Issued
+Number of Projects
 
 ## Features
 
@@ -25,13 +36,6 @@ An interactive dashboard for visualizing carbon credit distribution across diffe
   - plotly
 - Data file: `2025_0103_1434.csv` (tab-separated, UTF-8 encoded)
 
-## Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/carbon-market-visualization.git
-cd carbon-market-visualization
-```
 
 ## Usage
 Run the application:
