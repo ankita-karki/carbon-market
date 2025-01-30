@@ -37,10 +37,6 @@ Number of Projects
 - Data file: `2025_0103_1434.csv` (tab-separated, UTF-8 encoded)
 
 
-## Usage
-Run the application:
-app.py
-
 ## Access the dashboard at:
 http://127.0.0.1:8050/
 
