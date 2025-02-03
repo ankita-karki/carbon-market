@@ -5,7 +5,7 @@ import plotly.express as px
 # Load the data
 @st.cache_data  # Cache the data to improve performance
 def load_data():
-    df = pd.read_csv('D:/ankita/python/carbon-market/Data/2025_0103_1434.csv', sep='\t', encoding='utf-8')
+    df = pd.read_csv('Data/2025_0103_1434.csv', sep='\t', encoding='utf-8')
     if 'COUNT' not in df.columns:
         df['COUNT'] = 1  # Assuming each row represents a single project
     return df
