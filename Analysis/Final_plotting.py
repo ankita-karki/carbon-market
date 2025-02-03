@@ -121,6 +121,7 @@ def update_map(selected_project_scope):
     
     return fig
 
+
 # Run the app
 if __name__ == "__main__":
     app.run_server(debug=True)
