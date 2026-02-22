@@ -47,7 +47,7 @@ The SQL query performs the following operations:
 
 
 ## Access the dashboard at:
-https://carbon-market-gi4gdzz2kqstpeseamzjg2.streamlit.app/
+https://musical-lamp-pj7rv4rw9v4x27jxj-8501.app.github.dev/
 
 
 ## Interact with the dashboard:
